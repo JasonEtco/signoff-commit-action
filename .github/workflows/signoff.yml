@@ -12,7 +12,7 @@ jobs:
             const isValidSignOff = (
               context.payload.action === 'created' &&
               context.payload.issue.pull_request &&
-              context.payload.comment.user.id === context.payload.issue.author.id &&
+              context.payload.comment.user.id === context.payload.issue.user.id &&
               context.payload.comment.body === '/signoff'
             )
 
